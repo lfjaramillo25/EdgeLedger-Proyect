@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Noto+Sans+KR:wght@300&display=swap');
+/*reset*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+ color: #333;
+ background: #fff;
+ line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+p {
+  margin: 10px 0;
+}
+img {
+  height: 100%;
+  width: 100%;
+}
+
+/*Header*/
+.head {
+  background: url(../images/home/showcase.jpg) no-repeat center center/cover;
+  height: 100Vh;
+  display: flex;
+  flex-flow: column;
+}
+ /*Nav bar*/
+.barNav {
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0 45px;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  transition: 0.5s;
+}
+.barNav.top {
+  background: transparent;
+}
+   /*Title page name*/
+.barNav h1 {
+  padding-top: 10px;
+  font-size: 35px;
+  color: rgba(255, 255, 255, 0.664);
+  padding-left: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.barNav .text-primary {
+  color: #4CAF50;
+  font-weight: 500;
+}
+.barNav ul {
+  display: flex;
+  min-width: 300px;
+  height: 25px;
+}
+.barNav ul li {
+  width: 25%;
+  text-align: center;
+}
+.barNav ul li a {
+  display: inline-block;
+ width: 100%;
+  color: #fff;
+  font-weight: 500;
+
+}
+.barNav ul li a:hover {
+  border-bottom: #4CAF50 2px solid;
+}
+/*content*/
+.content {
+ background: rgba(0,0,0,0.6);
+ height: 100%;
+ text-align: center; 
+ 
+}
+.content > *{
+ color: #fff;
+ margin-top: 25px;
+}
+.content h2 {
+ font-size: 60px;
+}
+.content p {
+ width: 50%;
+}
+
+/*Icon Section*/
+.section-flex{
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  text-align: center;
+  min-height: 250px;
+}
+.section-flex div{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: 20px;
+  height: 100%;
+}
+.section-flex div i{
+ font-size: 50px;
+ background-color: #28a745;
+ color: #fff;
+ align-self: center;
+ padding: 15px;
+ border-radius: 50%;
+ 
+}
+.section-flex div> * {
+  margin-top: 15px;
+}
+
+/*about solutions*/
+.about-img {
+  width: 50%;
+}
+.about-info {
+  width: 50%;
+  background: #4CAF50;
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+ /* cases */
+ .cases .cases-info {
+   height: 200px;
+ }
+
+ .cases .cases-galery {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   align-items: center;
+   
+ }
+ .cases .cases-galery a {
+   width: 24%;
+ }
+ .cases .cases-galery a:hover {
+   opacity: 0.8;
+ }
+ .cases .cases-galery img {
+   width: 100%;
+   height: 100%;
+ }
+ 
+ /*Blog*/
+ .blog .blog-info > *{
+  padding-top: 15px;
+ }
+ .blog .blog-info {
+   width: 50%;
+   padding: 20px;
+   background: #0284d0;
+   color: #fff;
+ }
+ .blog .blog-img{
+   width: 50%;
+ }
+ /*Teams*/
+ 
+ .team-img {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+ }
+ .team-img > * {
+   width: 30%;
+   display: flex;
+   flex-flow: column;
+ }
+ .team-img img {
+  border-radius: 5px;
+ }
+
+ /*contact*/
+ .contact-img {
+  width: 50%;
+ }
+ .contact-info {
+  width: 50%;
+  background-color: #f4f4f4; 
+  padding: 20px
+ }
+.contact-form {
+   width: 100%;
+ }
+.contact-form input:focus {
+  outline-color: #28a745;
+ }
+ .contact-form > * {
+   margin-top: 15px;
+   padding: 5px;
+   border: none;
+ }
+
+/*Footer*/
+.footer {
+  height: 200px;
+  background-color: #333;
+  color: #fff;
+}
+.footer i {
+  color: #fff;
+  margin-left: 15px;
+}
+
+/*Mobile*/
+@media(max-width: 768px){
+  /*head*/
+  .barNav {
+    flex-flow: column wrap;
+    height: 120px;
+    align-items: center;
+    align-content: center;
+    padding: 15px;
+  }
+  .barNav.top {
+    background: transparent;
+  }
+
+  /*about*/
+  .about-img, .about-info {
+    width: 100%; 
+  }
+  .blog .blog-img, .blog .blog-info {
+    width: 100%;
+  }
+
+  /*Contact*/
+  .contact-img, .contact-info {
+    width: 100%;
+  }
+
+  /*footer*/
+  .footer{
+    height: 100px;
+  }
+  
+}
